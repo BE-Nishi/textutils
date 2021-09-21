@@ -4,12 +4,8 @@ import Navbar from './Component/Navbar';
 import Textform from './Component/Textform';
 import React, { useState } from 'react'
 import Alert from './Component/Alert';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
+import About from './Component/About';
 
 function App() {
   
@@ -104,21 +100,19 @@ function App() {
  
   return (
     
-   <Router>
-   <Navbar title="TextUtils" about="About Us" mode={mode}  darkmode={darkMode} secondarymode={secondaryMode} greenmode={greenMode} infomode={infoMode} redmode={redMode} yellowmode={yelloMode}/>
+   <>
+   <Navbar title="TextUtils" mode={mode}  darkmode={darkMode} secondarymode={secondaryMode} greenmode={greenMode} infomode={infoMode} redmode={redMode} yellowmode={yelloMode}/>
    <Alert alert={alert}/>
-<div className="container my-4">
+
+   <div className="container my-4">
   <Textform mode={mode} showAlert={showAlert}/>
-  </div>  
-  <Switch>
-          <Route path="/about">
+  </div> 
+        
             <About />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-   </Router>
+         
+          
+     
+   </>
   );
 }
 
