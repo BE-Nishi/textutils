@@ -4,7 +4,6 @@ import Navbar from './Component/Navbar';
 import Textform from './Component/Textform';
 import React, { useState } from 'react'
 import Alert from './Component/Alert';
-
 import About from './Component/About';
 
 function App() {
@@ -101,15 +100,16 @@ function App() {
   return (
     
    <>
+ 
    <Navbar title="TextUtils" mode={mode}  darkmode={darkMode} secondarymode={secondaryMode} greenmode={greenMode} infomode={infoMode} redmode={redMode} yellowmode={yelloMode}/>
    <Alert alert={alert}/>
-
-   <div className="container my-4">
+            
+          <div className="container my-4">
   <Textform mode={mode} showAlert={showAlert}/>
   </div> 
-        
-            <About />
          
+            <About />
+           
           
      
    </>
