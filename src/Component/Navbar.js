@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 export default function Navbar(props) {
   
 
   return (
-    <Router>
+    <>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
         <div className="container-fluid">
-          <a className={`navbar-brand fw-bolder text-${props.mode==='light'?'black':'white'}`} href="#">
+          <a className={`navbar-brand fw-bolder text-${props.mode==='light'?'black':'white'}`} href="">
             {props.title}
           </a>
           <button
@@ -25,13 +26,13 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className={`nav-link active text-${props.mode==='light'?'black':'white'}`} aria-current="page" href="#">
+                <a className={`nav-link active text-${props.mode==='light'?'black':'white'}`} aria-current="page" href="">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className={`nav-link text-${props.mode==='light'?'black':'white'}`} href="#">
-                  {props.about}
+                <a className={`nav-link text-${props.mode==='light'?'black':'white'}`} href="">
+                 About Us
                 </a>
               </li>
             </ul>
@@ -49,7 +50,7 @@ export default function Navbar(props) {
               </button>
               <ul className={`dropdown-menu bg-${props.mode==='light'?'light':props.mode}`} aria-labelledby="dropdownMenuButton1">
                 <li>
-                  <a className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} href="#">
+                  <a className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} href="">
                     <div className="form-check form-switch" onClick={props.darkmode}>
                       <input
                         className="form-check-input"
@@ -165,6 +166,6 @@ export default function Navbar(props) {
       </nav>
     
      
-    </Router>
+    </>
   );
 }
