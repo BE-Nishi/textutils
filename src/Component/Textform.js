@@ -182,7 +182,7 @@ export default function Textform(props) {
           props.mode === "warning"
             ? "black"
             : "white"
-        }`}>Words : <b>{text=="" || text==null ? '0' :text.split(" ").length}</b></p>
+        }`}>Words : <b>{text.split(" ").filter((element)=>{ return element.length!==0}).length}</b></p>
       <p className={`text-${
           props.mode === "light" ||
           props.mode === "success" ||
@@ -199,7 +199,7 @@ export default function Textform(props) {
             ? "black"
             : "white"
         }`}>
-        Average Time Required to Read Above Text : <b>{text=="" || text==null ? '0':0.00333333333 * text.split(" ").length}</b>
+        Average Time Required to Read Above Text : <b>{0.00333333333 * text.split(" ").length}</b>
       </p>
       <p className={`text-${
           props.mode === "light" ||
