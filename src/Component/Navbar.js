@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 
 export default function Navbar(props) {
@@ -8,9 +9,9 @@ export default function Navbar(props) {
     <>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
         <div className="container-fluid">
-          <a className={`navbar-brand fw-bolder text-${props.mode==='light'?'black':'white'}`} href="/">
+          <Link className={`navbar-brand fw-bolder text-${props.mode==='light'?'black':'white'}`} to="/">
             {props.title}
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,15 +25,15 @@ export default function Navbar(props) {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className={`nav-a active text-${props.mode==='light'?'black':'white'}`} aria-current="page" href="/">
+              <li className="nav-item mx-3">
+                <Link className={`nav-a active text-${props.mode==='light'?'black':'white'}`} aria-current="page" to="/" style={{textDecoration: 'none'}}>
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className={`nav-a text-${props.mode==='light'?'black':'white'}`} href="/about">
+                <Link className={`nav-a text-${props.mode==='light'?'black':'white'}`} to="/about" style={{textDecoration: 'none'}}>
                  About Us
-                </a>
+                </Link>
               </li>
             </ul>
             
@@ -49,7 +50,7 @@ export default function Navbar(props) {
               </button>
               <ul className={`dropdown-menu bg-${props.mode==='light'?'light':props.mode}`} aria-labelledby="dropdownMenuButton1">
                 <li>
-                  <a className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} href="">
+                  <Link className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} to="">
                     <div className="form-check form-switch" onClick={props.darkmode}>
                       <input
                         className="form-check-input"
@@ -63,10 +64,10 @@ export default function Navbar(props) {
                         Dark Mode
                       </label>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} href="#" onClick={props.secondarymode}>
+                  <Link className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} to="#" onClick={props.secondarymode}>
                     <div className="form-check form-switch">
                       <input
                         className="form-check-input"
@@ -80,10 +81,10 @@ export default function Navbar(props) {
                         Gray Mode
                       </label>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} href="#" onClick={props.greenmode}>
+                  <Link className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} to="#" onClick={props.greenmode}>
                     <div className="form-check form-switch">
                       <input
                         className="form-check-input"
@@ -97,12 +98,12 @@ export default function Navbar(props) {
                         Green Mode
                       </label>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               
               
                 <li>
-                  <a className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} href="#" onClick={props.infomode}>
+                  <Link className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} to="#" onClick={props.infomode}>
                     <div className="form-check form-switch">
                       <input
                         className="form-check-input"
@@ -116,12 +117,12 @@ export default function Navbar(props) {
                         Teal Mode
                       </label>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               
               
                 <li>
-                  <a className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} href="#" onClick={props.redmode}>
+                  <Link className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} to="#" onClick={props.redmode}>
                     <div className="form-check form-switch">
                       <input
                         className="form-check-input"
@@ -135,12 +136,12 @@ export default function Navbar(props) {
                         Red Mode
                       </label>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               
               
                 <li>
-                  <a className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} href="#" onClick={props.yellowmode}>
+                  <Link className={`dropdown-item text-${props.mode==='light'?'black':'white'}`} to="#" onClick={props.yellowmode}>
                     <div className="form-check form-switch">
                       <input
                         className="form-check-input"
@@ -154,7 +155,7 @@ export default function Navbar(props) {
                         Yellow Mode
                       </label>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               
               
