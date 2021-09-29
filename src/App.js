@@ -5,6 +5,12 @@ import Textform from './Component/Textform';
 import React, { useState } from 'react'
 import Alert from './Component/Alert';
 import About from './Component/About';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   
@@ -100,15 +106,22 @@ function App() {
   return (
     
    <>
- 
-   <Navbar title="TextUtils" mode={mode}  darkmode={darkMode} secondarymode={secondaryMode} greenmode={greenMode} infomode={infoMode} redmode={redMode} yellowmode={yelloMode}/>
-   <Alert alert={alert}/>
-            
-          <div className="container my-4">
-  <Textform mode={mode} showAlert={showAlert}/>
-  </div> 
-         
+ <Router>
+ <Navbar title="TextUtils" mode={mode}  darkmode={darkMode} secondarymode={secondaryMode} greenmode={greenMode} infomode={infoMode} redmode={redMode} yellowmode={yelloMode}/>
+   
+   
+   <Alert alert={alert}/>     
+            <Switch>
+          <Route path="/about">
             <About />
+          </Route>
+          
+          <Route path="/">
+          <Textform mode={mode} showAlert={showAlert}/>
+          </Route>
+        </Switch>
+ </Router>
+   
            
           
      
