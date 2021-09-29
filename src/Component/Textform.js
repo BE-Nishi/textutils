@@ -73,6 +73,7 @@ export default function Textform(props) {
 
   return (
     <>
+     <div className="container my-2"> 
       <h2
         className={`text-${
           props.mode === "light" ||
@@ -98,7 +99,7 @@ export default function Textform(props) {
 
         <button
           type="button"
-          className={`btn btn-outline-${props.mode} mx-1 text-${
+          className={`btn btn-outline-${props.mode} m-1 text-${
             props.mode === "dark" ||
             props.mode === "secondary" ||
             props.mode === "danger"
@@ -111,7 +112,7 @@ export default function Textform(props) {
         </button>
         <button
           type="button"
-          className={`btn btn-outline-${props.mode} mx-1 text-${
+          className={`btn btn-outline-${props.mode} m-1  text-${
             props.mode === "dark" ||
             props.mode === "secondary" ||
             props.mode === "danger"
@@ -124,7 +125,7 @@ export default function Textform(props) {
         </button>
         <button
           type="button"
-          className={`btn btn-outline-${props.mode} mx-1 text-${
+          className={`btn btn-outline-${props.mode} m-1 text-${
             props.mode === "dark" ||
             props.mode === "secondary" ||
             props.mode === "danger"
@@ -150,7 +151,7 @@ export default function Textform(props) {
         </button>
         <button
           type="button"
-          className={`btn btn-outline-${props.mode} mx-1 text-${
+          className={`btn btn-outline-${props.mode} m-1 text-${
             props.mode === "dark" ||
             props.mode === "secondary" ||
             props.mode === "danger"
@@ -162,7 +163,7 @@ export default function Textform(props) {
         </button>
         <button
           type="button"
-          className={`btn btn-outline-${props.mode} mx-1 text-${
+          className={`btn btn-outline-${props.mode} m-1 text-${
             props.mode === "dark" ||
             props.mode === "secondary" ||
             props.mode === "danger"
@@ -211,11 +212,15 @@ export default function Textform(props) {
         }`}>
             Preview
             </p>
-      <div className={`container shadow-sm p-3 mb-5 bg-body rounded bg-${props.mode} text-${
-            props.mode === "light" ? "black" : "white"
-          }`}>
+      <div className={`container shadow-sm p-3 mb-5 bg-body rounded text-${
+          props.mode
+            ? "black"
+            : "white"
+        }`}>
         {text}
       </div>
+    </div>
     </>
+
   );
 }
